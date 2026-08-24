@@ -60,8 +60,8 @@ Good example:
 
 ```python
 from django.contrib.auth.mixins import (
-    LoginRequiredMixin, 
-    UserPassesTestMixin, 
+    LoginRequiredMixin,
+    UserPassesTestMixin,
     PermissionRequiredMixin,
 )
 ```
@@ -69,16 +69,20 @@ from django.contrib.auth.mixins import (
 Bad example:
 
 ```python
-from django.contrib.auth.mixins import LoginRequiredMixin, \
-    UserPassesTestMixin, PermissionRequiredMixin
+from django.contrib.auth.mixins import (
+    LoginRequiredMixin,
+    UserPassesTestMixin,
+    PermissionRequiredMixin,
+)
 ```
 
 Another bad example:
 
 ```python
 from django.contrib.auth.mixins import (
-    LoginRequiredMixin, 
-    UserPassesTestMixin, PermissionRequiredMixin,
+    LoginRequiredMixin,
+    UserPassesTestMixin,
+    PermissionRequiredMixin,
 )
 ```
 
