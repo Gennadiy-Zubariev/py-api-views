@@ -10,7 +10,10 @@ from cinema.views import (
     CinemaHallViewSet,
 )
 
-cinema_hall_list = CinemaHallViewSet.as_view(actions={"get": "list", "post": "create"})
+cinema_hall_list = CinemaHallViewSet.as_view(actions={
+    "get": "list",
+    "post": "create"
+})
 
 cinema_hall_detail = CinemaHallViewSet.as_view(
     actions={
@@ -31,7 +34,9 @@ urlpatterns = [
     path("actors/", ActorList.as_view(), name="actor-list"),
     path("actors/<int:pk>/", ActorDetail.as_view(), name="actor-detail"),
     path("cinema_halls/", cinema_hall_list, name="cinema-hall-list"),
-    path("cinema_halls/<int:pk>/", cinema_hall_detail, name="cinema-hall-detail"),
+    path(
+        "cinema_halls/<int:pk>/", cinema_hall_detail, name="cinema-hall-detail"
+    ),
     path("", include(router.urls)),
 ]
 
