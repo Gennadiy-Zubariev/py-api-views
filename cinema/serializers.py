@@ -29,4 +29,3 @@ class MovieSerializer(serializers.ModelSerializer):
             "actors": {"required": False, "allow_empty": True},
             "genres": {"required": False, "allow_empty": True},
         }
-

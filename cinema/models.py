@@ -19,10 +19,7 @@ class Genre(models.Model):
 
 class CinemaHall(models.Model):
     name = models.CharField(max_length=255)
-    rows = models.IntegerField(validators=[
-        MinValueValidator(1),
-        MaxValueValidator(30)
-    ])
+    rows = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(30)])
     seats_in_row = models.IntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(50)]
     )
