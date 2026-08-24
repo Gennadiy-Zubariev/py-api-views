@@ -13,7 +13,7 @@ from cinema.serializers import (
 
 
 class GenreList(views.APIView):
-    def get(self, pk):
+    def get(self, request):
         genres = Genre.objects.all()
         serializer = GenreSerializer(genres, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
